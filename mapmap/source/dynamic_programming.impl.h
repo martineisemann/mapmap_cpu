@@ -481,7 +481,7 @@ node_memory_allocate(
     /* determine number of needed storage spaces */
     const _iv_st<COSTTYPE, SIMDWIDTH> entry_size = SIMDWIDTH *
         DIV_UP(this->m_label_set->label_set_size(
-        this->m_tree->node(node_id)->parent_id), SIMDWIDTH);
+        this->m_tree->node(node_id).parent_id), SIMDWIDTH);
 
     /* allocate memory */
     m_opt_value_nodes[node_id] = m_value_allocator->allocate(entry_size);
